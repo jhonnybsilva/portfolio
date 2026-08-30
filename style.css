@@ -263,26 +263,39 @@ body {
   box-shadow: 0 0 8px #10b981;
 }
 
+.hero-saudacao {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--cor-texto-mutado);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.3px;
+}
+
 .hero-titulo {
-  font-size: 3.25rem;
-  line-height: 1.15;
+  font-size: 3.5rem;
+  line-height: 1.25;
   font-weight: 800;
-  margin-bottom: 1rem;
-  letter-spacing: -1px;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.5px;
 }
 
 .hero-subtitulo {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  color: var(--cor-texto-mutado);
-  margin-bottom: 1rem;
+  color: var(--cor-texto);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.2px;
 }
 
 .hero-descricao {
   font-size: 1.05rem;
   color: var(--cor-texto-mutado);
-  max-width: 540px;
-  margin-bottom: 2rem;
+  max-width: 560px;
+  line-height: 1.85;
+  margin-bottom: 2.25rem;
+  letter-spacing: 0.2px;
 }
 
 .hero-botoes {
