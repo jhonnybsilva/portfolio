@@ -75,34 +75,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', destacarLinkNoScroll);
 
-  // 5. Simulação de Envio do Formulário de Contato
+  // 5. Envio Real de E-mail via FormSubmit API
   const formContato = document.getElementById('form-contato');
   const statusFormulario = document.getElementById('status-formulario');
 
   if (formContato && statusFormulario) {
-    formContato.addEventListener('submit', (e) => {
+    formContato.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const botaoEnviar = formContato.querySelector('button[type="submit"]');
       const textoOriginal = botaoEnviar.innerHTML;
+
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const mensagem = document.getElementById('mensagem').value;
 
       // Estado de envio
       botaoEnviar.disabled = true;
       botaoEnviar.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
       statusFormulario.textContent = '';
 
-      // Simulação de envio com sucesso após 1.5s
-      setTimeout(() => {
+      try {
+        const resposta = await fetch("https://formsubmit.co/ajax/jhonnybrasilianodasilva123etec@gmail.com", {
+          method: "POST",
+          headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            Nome: nome,
+            Email: email,
+            Mensagem: mensagem,
+            _subject: `Novo Contato do Portfólio: ${nome}`,
+            _template: 'table'
+          })
+        });
+
+        if (resposta.ok) {
+          statusFormulario.style.color = '#10b981';
+          statusFormulario.textContent = 'Mensagem enviada com sucesso! O e-mail foi entregue diretamente para mim.';
+          formContato.reset();
+        } else {
+          statusFormulario.style.color = '#ef4444';
+          statusFormulario.textContent = 'Erro ao enviar. Caso seja o primeiro teste, verifique seu e-mail para ativar o formulário ou use o WhatsApp!';
+        }
+      } catch (erro) {
+        statusFormulario.style.color = '#ef4444';
+        statusFormulario.textContent = 'Erro de conexão ao enviar. Por favor, tente pelo WhatsApp ou envie um e-mail direto!';
+      } finally {
         botaoEnviar.disabled = false;
         botaoEnviar.innerHTML = textoOriginal;
-        statusFormulario.style.color = '#10b981';
-        statusFormulario.textContent = 'Mensagem enviada com sucesso! Em breve entrarei em contato.';
-        formContato.reset();
 
         setTimeout(() => {
           statusFormulario.textContent = '';
-        }, 5000);
-      }, 1500);
+        }, 8000);
+      }
     });
   }
 });
