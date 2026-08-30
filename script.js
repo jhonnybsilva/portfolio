@@ -83,12 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
     formContato.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      const botaoEnviar = formContato.querySelector('button[type="submit"]');
+      const botaoEnviar = document.getElementById('btn-enviar-msg') || formContato.querySelector('button[type="submit"]');
       const textoOriginal = botaoEnviar.innerHTML;
-
-      const nome = document.getElementById('nome').value;
-      const email = document.getElementById('email').value;
-      const mensagem = document.getElementById('mensagem').value;
 
       // Estado de envio
       botaoEnviar.disabled = true;
@@ -96,39 +92,38 @@ document.addEventListener('DOMContentLoaded', () => {
       statusFormulario.textContent = '';
 
       try {
+        const formData = new FormData(formContato);
         const resposta = await fetch("https://formsubmit.co/ajax/jhonnybrasilianodasilva123etec@gmail.com", {
           method: "POST",
           headers: { 
-            'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
-          body: JSON.stringify({
-            Nome: nome,
-            Email: email,
-            Mensagem: mensagem,
-            _subject: `Novo Contato do Portfólio: ${nome}`,
-            _template: 'table'
-          })
+          body: formData
         });
 
-        if (resposta.ok) {
+        const dados = await resposta.json();
+
+        if (resposta.ok && (dados.success === "true" || dados.success === true)) {
           statusFormulario.style.color = '#10b981';
-          statusFormulario.textContent = 'Mensagem enviada com sucesso! O e-mail foi entregue diretamente para mim.';
+          statusFormulario.textContent = 'Mensagem enviada com sucesso! Receberei seu e-mail em instantes.';
           formContato.reset();
+        } else if (dados.message && dados.message.includes("Activation")) {
+          statusFormulario.style.color = '#f59e0b';
+          statusFormulario.textContent = 'Por favor, abra o e-mail que o FormSubmit enviou no seu Gmail e clique em "Activate Form" para ativar o recebimento.';
         } else {
           statusFormulario.style.color = '#ef4444';
-          statusFormulario.textContent = 'Erro ao enviar. Caso seja o primeiro teste, verifique seu e-mail para ativar o formulário ou use o WhatsApp!';
+          statusFormulario.textContent = dados.message || 'Erro ao enviar. Por favor, tente pelo WhatsApp ou e-mail direto.';
         }
       } catch (erro) {
         statusFormulario.style.color = '#ef4444';
-        statusFormulario.textContent = 'Erro de conexão ao enviar. Por favor, tente pelo WhatsApp ou envie um e-mail direto!';
+        statusFormulario.textContent = 'Erro de conexão. Por favor, entre em contato pelo WhatsApp ou e-mail direto!';
       } finally {
         botaoEnviar.disabled = false;
         botaoEnviar.innerHTML = textoOriginal;
 
         setTimeout(() => {
           statusFormulario.textContent = '';
-        }, 8000);
+        }, 9000);
       }
     });
   }
