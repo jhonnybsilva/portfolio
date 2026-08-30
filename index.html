@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio Profissional de Jhonny Brasiliano da Silva - Especialista em Data Analytics, Python, Automação e Infraestrutura de TI.">
+  <title>Jhonny Brasiliano da Silva | Data Analytics & Tecnologia</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="foto-perfil.jpg">
+  
+  <!-- Estilos Personalizados -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Barra de Navegação -->
+  <header class="cabecalho" id="cabecalho">
+    <nav class="navegacao container">
+      <a href="#inicio" class="logo">
+        <span class="logo-icone">&lt;/&gt;</span>
+        <span class="logo-texto">Jhonny.dev</span>
+      </a>
+
+      <div class="menu-navegacao" id="menu-navegacao">
+        <ul class="lista-links">
+          <li><a href="#inicio" class="link-nav ativo">Início</a></li>
+          <li><a href="#sobre" class="link-nav">Sobre Mim</a></li>
+          <li><a href="#habilidades" class="link-nav">Habilidades</a></li>
+          <li><a href="#experiencia" class="link-nav">Experiência</a></li>
+          <li><a href="#formacao" class="link-nav">Formação</a></li>
+          <li><a href="#projetos" class="link-nav">Projetos</a></li>
+          <li><a href="#contato" class="link-nav">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="acoes-cabecalho">
+        <!-- Alternador de Tema (Claro/Escuro) -->
+        <button id="botao-tema" class="botao-icone" title="Alternar tema" aria-label="Alternar tema">
+          <i class="fa-solid fa-sun icone-sol"></i>
+          <i class="fa-solid fa-moon icone-lua"></i>
+        </button>
+
+        <!-- Botão Menu Mobile -->
+        <button id="botao-menu" class="botao-icone menu-hamburguer" aria-label="Abrir menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <!-- Seção de Início (Hero) -->
+    <section class="secao hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-conteudo">
+          <div class="tag-status">
+            <span class="ponto-status"></span>
+            Disponível para Projetos & Oportunidades
+          </div>
+          <h1 class="hero-titulo">
+            Olá, eu sou <br>
+            <span class="destaque-gradiente" id="campo-nome">Jhonny Brasiliano</span>
+          </h1>
+          <p class="hero-subtitulo" id="campo-cargo">
+            Data Analytics &bull; Automação em Python &bull; Infraestrutura de TI
+          </p>
+          <p class="hero-descricao" id="campo-bio-curta">
+            Pós-graduado em <strong>Data Analytics pela FIAP</strong> e Analista na <strong>HSR Specialist Researchers</strong>. Foco em transformar dados em insights estratégicos, otimizar processos e construir soluções inteligentes.
+          </p>
+          
+          <div class="hero-botoes">
+            <a href="https://wa.me/5511991980934" target="_blank" class="botao botao-primario">
+              <i class="fa-brands fa-whatsapp"></i> Conversar no WhatsApp
+            </a>
+            <a href="#sobre" class="botao botao-secundario">
+              Conhecer Perfil <i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </div>
+
+          <div class="redes-sociais" id="campo-redes-topo">
+            <a href="https://github.com/jhonnybsilva" target="_blank" class="link-social" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/jhonnybrasilianodasilva" target="_blank" class="link-social" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://wa.me/5511991980934" target="_blank" class="link-social" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:jhonnybrasilianodasilva123etec@gmail.com" class="link-social" title="E-mail"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-imagem-container">
+          <div class="moldura-foto">
+            <div class="foto-wrapper">
+              <img src="foto-perfil.jpg" alt="Foto de perfil de Jhonny Brasiliano da Silva" class="foto-perfil-img">
+              <div class="overlay-status">
+                <span class="ponto-status"></span>
+                <span>Data & TI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Sobre Mim -->
+    <section class="secao sobre" id="sobre">
+      <div class="container">
+        <div class="cabecalho-secao">
+          <span class="subtitulo-secao">Perfil Profissional</span>
+          <h2 class="titulo-secao">Sobre Mim</h2>
+        </div>
+
+        <div class="sobre-grid">
+          <div class="sobre-texto">
+            <p class="paragrafo">
+              Sou movido pela <strong>curiosidade</strong> e pela vontade constante de aprender, crescer e evoluir. Tenho um interesse genuíno por <strong>tecnologia, programação e análise de dados</strong>, e estou sempre em busca de novos conhecimentos — seja por meio de projetos práticos, cursos, leituras ou desafios reais do mercado.
+            </p>
+            <p class="paragrafo">
+              Tenho foco em <strong>automação de processos</strong>, <strong>Data Analytics</strong> e <strong>desenvolvimento em Python</strong>, buscando sempre transformar grandes volumes de dados em insights estratégicos que apoiem a tomada de decisão e a eficiência operacional das empresas.
+            </p>
+            <p class="paragrafo">
+              Sou uma pessoa analítica, proativa e orientada a resultados. Valorizo o trabalho colaborativo, a troca de conhecimento e a inovação contínua.
+            </p>
+
+            <div class="cards-destaques">
+              <div class="card-destaque">
+                <div class="card-destaque-icone">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="card-destaque-info">
+                  <h4 class="destaque-titulo">Pós-Graduação</h4>
+                  <span class="destaque-legenda">Data Analytics (FIAP)</span>
+                </div>
+              </div>
+
+              <div class="card-destaque">
+                <div class="card-destaque-icone">
+                  <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <div class="card-destaque-info">
+                  <h4 class="destaque-titulo">Infraestrutura</h4>
+                  <span class="destaque-legenda">HSR Specialist Researchers</span>
+                </div>
+              </div>
+
+              <div class="card-destaque">
+                <div class="card-destaque-icone">
+                  <i class="fa-solid fa-language"></i>
+                </div>
+                <div class="card-destaque-info">
+                  <h4 class="destaque-titulo">Idiomas</h4>
+                  <span class="destaque-legenda">Inglês Avançado & Espanhol</span>
+                </div>
+              </div>
+
+              <div class="card-destaque">
+                <div class="card-destaque-icone">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="card-destaque-info">
+                  <h4 class="destaque-titulo">Localização</h4>
+                  <span class="destaque-legenda">Embu das Artes - SP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Habilidades -->
+    <section class="secao habilidades" id="habilidades">
+      <div class="container">
+        <div class="cabecalho-secao">
+          <span class="subtitulo-secao">Competências Técnicas</span>
+          <h2 class="titulo-secao">Minhas Habilidades</h2>
+        </div>
+
+        <div class="grid-habilidades" id="container-habilidades">
+          <!-- Python & Dados -->
+          <div class="card-habilidade">
+            <i class="fa-brands fa-python icone-skill" style="color: #38bdf8;"></i>
+            <h3>Python & Automação</h3>
+            <p>Desenvolvimento de scripts, automação de rotinas, integração de dados e tratamento com Pandas e NumPy.</p>
+          </div>
+
+          <!-- Data Analytics & EDA -->
+          <div class="card-habilidade">
+            <i class="fa-solid fa-chart-line icone-skill" style="color: #a855f7;"></i>
+            <h3>Análise Exploratória (EDA)</h3>
+            <p>Estatística descritiva, detecção de padrões, correlações e modelagem preditiva aplicada ao negócio.</p>
+          </div>
+
+          <!-- Visualização de Dados -->
+          <div class="card-habilidade">
+            <i class="fa-solid fa-chart-simple icone-skill" style="color: #f59e0b;"></i>
+            <h3>Power BI, Matplotlib & Seaborn</h3>
+            <p>Construção de dashboards interativos, relatórios executivos e visualizações gráficas de alta clareza.</p>
+          </div>
+
+          <!-- SQL & Big Data -->
+          <div class="card-habilidade">
+            <i class="fa-solid fa-database icone-skill" style="color: #06b6d4;"></i>
+            <h3>SQL, BigQuery & Spark</h3>
+            <p>Consultas avançadas, extração, transformação e manipulação de bases de dados relacionais e em nuvem.</p>
+          </div>
+
+          <!-- Machine Learning -->
+          <div class="card-habilidade">
+            <i class="fa-solid fa-brain icone-skill" style="color: #ec4899;"></i>
+            <h3>Machine Learning & IA</h3>
+            <p>Conceitos de aprendizado de máquina, modelos preditivos, Deep Learning e Inteligência Artificial (Mackenzie).</p>
+          </div>
+
+          <!-- Infraestrutura & Cloud -->
+          <div class="card-habilidade">
+            <i class="fa-brands fa-microsoft icone-skill" style="color: #0284c7;"></i>
+            <h3>Microsoft 365 & Windows Server</h3>
+            <p>Administração de contas no Exchange, Teams, Active Directory, provisionamento de acessos e políticas.</p>
+          </div>
+
+          <!-- Redes & Segurança -->
+          <div class="card-habilidade">
+            <i class="fa-solid fa-shield-halved icone-skill" style="color: #10b981;"></i>
+            <h3>Redes & Segurança Digital</h3>
+            <p>Conhecimentos em TCP/IP, DNS, DHCP, VPNs, criptografia BitLocker e antivírus corporativo (Kaspersky/Bitdefender).</p>
+          </div>
+
+          <!-- Suporte Técnico & Help Desk -->
+          <div class="card-habilidade">
+            <i class="fa-solid fa-headset icone-skill" style="color: #6366f1;"></i>
+            <h3>Suporte N1/N2 & Atendimento VIP</h3>
+            <p>Gestão de chamados (DeskManager), suporte remoto (RDP, AnyDesk, TeamViewer) e manutenção preventiva/corretiva.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Experiência Profissional -->
+    <section class="secao experiencia" id="experiencia">
+      <div class="container">
+        <div class="cabecalho-secao">
+          <span class="subtitulo-secao">Carreira</span>
+          <h2 class="titulo-secao">Experiência Profissional</h2>
+        </div>
+
+        <div class="linha-tempo" id="container-experiencia">
+          <!-- Experiência 1 -->
+          <div class="item-linha-tempo">
+            <div class="marcador"></div>
+            <div class="conteudo-linha-tempo">
+              <span class="periodo">JUN 2024 - Atual</span>
+              <h3 class="cargo-curso">Analista de Infraestrutura</h3>
+              <span class="instituicao">HSR Specialist Researchers</span>
+              <ul class="lista-atividades" style="padding-left: 1.25rem; margin-top: 0.5rem; color: var(--cor-texto-mutado); font-size: 0.925rem; line-height: 1.7;">
+                <li>Atendimento a VIPs, clientes internos e externos de forma presencial e remota (RDP, AnyDesk, TeamViewer).</li>
+                <li>Suporte técnico garantindo alta disponibilidade e performance das plataformas corporativas (FastQuest, Route Research).</li>
+                <li>Acompanhamento de chamados (N1) via DeskManager, atuando na resolução de incidentes e melhoria de processos.</li>
+                <li>Administração de usuários no ambiente Microsoft 365 (Teams, Exchange), gestão de acessos e segurança.</li>
+                <li>Configuração e suporte em redes (LAN/WAN, DNS, TCP/IP, DHCP) e administração de segurança (BitLocker, Kaspersky, VPNs).</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experiência 2 -->
+          <div class="item-linha-tempo">
+            <div class="marcador"></div>
+            <div class="conteudo-linha-tempo">
+              <span class="periodo">JUL 2023 - JUN 2024</span>
+              <h3 class="cargo-curso">Estágio de TI</h3>
+              <span class="instituicao">HSR Specialist Researchers</span>
+              <ul class="lista-atividades" style="padding-left: 1.25rem; margin-top: 0.5rem; color: var(--cor-texto-mutado); font-size: 0.925rem; line-height: 1.7;">
+                <li>Suporte técnico N1 proativo e reativo a clientes VIPs internos e externos por ferramentas de acesso remoto.</li>
+                <li>Manutenção preventiva e corretiva de hardwares (notebooks, desktops, periféricos), reduzindo tempo de inatividade.</li>
+                <li>Administração do Microsoft 365 e gestão de contas de comunicação institucional.</li>
+                <li>Resolução eficiente de chamados via DeskManager com foco em agilidade e satisfação do usuário.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Formação Acadêmica & Cursos -->
+    <section class="secao formacao" id="formacao">
+      <div class="container">
+        <div class="cabecalho-secao">
+          <span class="subtitulo-secao">Educação</span>
+          <h2 class="titulo-secao">Formação Acadêmica & Cursos</h2>
+        </div>
+
+        <div class="grid-formacao" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.75rem;">
+          <!-- Pós-graduação -->
+          <div class="card-destaque-formacao" style="background: var(--cor-card); border: 1px solid var(--cor-borda); border-radius: var(--raio-borda); padding: 2rem; border-top: 4px solid var(--cor-destaque);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem;">
+              <span class="tag" style="background: rgba(99, 102, 241, 0.15); color: var(--cor-destaque);">Pós-Graduação &bull; Concluído</span>
+              <i class="fa-solid fa-graduation-cap" style="color: var(--cor-destaque); font-size: 1.5rem;"></i>
+            </div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.4rem;">Data Analytics</h3>
+            <strong style="color: var(--cor-secundaria); font-size: 1rem; display: block; margin-bottom: 0.75rem;">FIAP</strong>
+            <p style="color: var(--cor-texto-mutado); font-size: 0.9rem;">
+              Especialização avançada em modelagem de dados, análise preditiva, Machine Learning, visualização e inteligência de negócios.
+            </p>
+          </div>
+
+          <!-- Graduação -->
+          <div class="card-destaque-formacao" style="background: var(--cor-card); border: 1px solid var(--cor-borda); border-radius: var(--raio-borda); padding: 2rem; border-top: 4px solid #06b6d4;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem;">
+              <span class="tag" style="background: rgba(6, 182, 212, 0.15); color: #06b6d4;">Graduação</span>
+              <i class="fa-solid fa-laptop-code" style="color: #06b6d4; font-size: 1.5rem;"></i>
+            </div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.4rem;">Análise e Desenvolvimento de Sistemas</h3>
+            <strong style="color: var(--cor-secundaria); font-size: 1rem; display: block; margin-bottom: 0.75rem;">UNINOVE</strong>
+            <p style="color: var(--cor-texto-mutado); font-size: 0.9rem;">
+              Desenvolvimento de software, engenharia de requisitos, lógica de programação estruturada, banco de dados e arquitetura de sistemas.
+            </p>
+          </div>
+
+          <!-- Técnico -->
+          <div class="card-destaque-formacao" style="background: var(--cor-card); border: 1px solid var(--cor-borda); border-radius: var(--raio-borda); padding: 2rem; border-top: 4px solid #10b981;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem;">
+              <span class="tag" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">Curso Técnico</span>
+              <i class="fa-solid fa-network-wired" style="color: #10b981; font-size: 1.5rem;"></i>
+            </div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.4rem;">Redes de Computadores</h3>
+            <strong style="color: var(--cor-secundaria); font-size: 1rem; display: block; margin-bottom: 0.75rem;">ETEC - Embu das Artes</strong>
+            <p style="color: var(--cor-texto-mutado); font-size: 0.9rem;">
+              Infraestrutura de redes, protocolos TCP/IP, roteamento, cabeamento estruturado e segurança da informação.
+            </p>
+          </div>
+        </div>
+
+        <!-- Cursos Complementares & Idiomas -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+          <div style="background: var(--cor-fundo-secundario); border: 1px solid var(--cor-borda); padding: 1.5rem; border-radius: var(--raio-borda);">
+            <h4 style="font-size: 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; color: var(--cor-destaque);">
+              <i class="fa-solid fa-award"></i> Cursos Complementares
+            </h4>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.925rem; color: var(--cor-texto-mutado);">
+              <li><strong>Mackenzie:</strong> Inteligência Artificial e Ferramentas Avançadas de Dados</li>
+              <li><strong>SENAI:</strong> Lógica de Programação</li>
+            </ul>
+          </div>
+
+          <div style="background: var(--cor-fundo-secundario); border: 1px solid var(--cor-borda); padding: 1.5rem; border-radius: var(--raio-borda);">
+            <h4 style="font-size: 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; color: var(--cor-secundaria);">
+              <i class="fa-solid fa-globe"></i> Idiomas
+            </h4>
+            <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.925rem; color: var(--cor-texto-mutado);">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span><strong>Inglês:</strong> Avançado</span>
+                <span class="tag" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">Fluência / Avançado</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span><strong>Espanhol:</strong> Intermediário</span>
+                <span class="tag" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;">Intermediário</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Projetos em Destaque -->
+    <section class="secao projetos" id="projetos">
+      <div class="container">
+        <div class="cabecalho-secao">
+          <span class="subtitulo-secao">Portfólio de Soluções</span>
+          <h2 class="titulo-secao">Projetos em Destaque</h2>
+        </div>
+
+        <div class="grid-projetos" id="container-projetos">
+          <!-- Projeto 1 -->
+          <article class="card-projeto">
+            <div class="projeto-banner">
+              <div class="projeto-icone-preview">
+                <i class="fa-solid fa-chart-line" style="color: #6366f1;"></i>
+              </div>
+            </div>
+            <div class="projeto-corpo">
+              <div class="projeto-tags">
+                <span class="tag">Python</span>
+                <span class="tag">EDA</span>
+                <span class="tag">Matplotlib</span>
+                <span class="tag">Pandas</span>
+              </div>
+              <h3 class="projeto-titulo">Análise Exploratória de Dados (EDA)</h3>
+              <p class="projeto-descricao">
+                Pipeline completo de análise exploratória, tratamento de valores nulos, correlação estatística e geração de insights visuais estratégicos.
+              </p>
+              <div class="projeto-links">
+                <a href="https://github.com/jhonnybsilva" target="_blank" class="link-projeto destaque"><i class="fa-brands fa-github"></i> Ver no GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 2 -->
+          <article class="card-projeto">
+            <div class="projeto-banner">
+              <div class="projeto-icone-preview">
+                <i class="fa-solid fa-chart-pie" style="color: #06b6d4;"></i>
+              </div>
+            </div>
+            <div class="projeto-corpo">
+              <div class="projeto-tags">
+                <span class="tag">Power BI</span>
+                <span class="tag">SQL</span>
+                <span class="tag">DAX</span>
+                <span class="tag">Dashboards</span>
+              </div>
+              <h3 class="projeto-titulo">Dashboard Executivo de Inteligência</h3>
+              <p class="projeto-descricao">
+                Painel interativo com KPIs operacionais e gerenciais, modelagem estrela, medidas DAX avançadas e visualizações dinâmicas.
+              </p>
+              <div class="projeto-links">
+                <a href="https://github.com/jhonnybsilva" target="_blank" class="link-projeto destaque"><i class="fa-brands fa-github"></i> Ver no GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 3 -->
+          <article class="card-projeto">
+            <div class="projeto-banner">
+              <div class="projeto-icone-preview">
+                <i class="fa-solid fa-gears" style="color: #10b981;"></i>
+              </div>
+            </div>
+            <div class="projeto-corpo">
+              <div class="projeto-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Automação</span>
+                <span class="tag">Machine Learning</span>
+              </div>
+              <h3 class="projeto-titulo">Automação & Modelagem Preditiva</h3>
+              <p class="projeto-descricao">
+                Scripts para automação de extração de dados e aplicação de algoritmos preditivos para otimização de decisões e eficiência de processos.
+              </p>
+              <div class="projeto-links">
+                <a href="https://github.com/jhonnybsilva" target="_blank" class="link-projeto destaque"><i class="fa-brands fa-github"></i> Ver no GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section class="secao contato" id="contato">
+      <div class="container">
+        <div class="cabecalho-secao">
+          <span class="subtitulo-secao">Vamos Conversar?</span>
+          <h2 class="titulo-secao">Entre em Contato</h2>
+        </div>
+
+        <div class="contato-grid">
+          <div class="contato-info">
+            <h3>Disponível para novos desafios e colaborações</h3>
+            <p>
+              Quer discutir um projeto de dados, automação, infraestrutura ou trocar ideias sobre tecnologia? Entre em contato pelos canais abaixo!
+            </p>
+
+            <div class="lista-contatos">
+              <a href="https://wa.me/5511991980934" target="_blank" class="item-contato" style="text-decoration: none; color: inherit;">
+                <i class="fa-brands fa-whatsapp"></i>
+                <div>
+                  <span>WhatsApp / Celular</span>
+                  <p id="texto-telefone">(11) 99198-0934</p>
+                </div>
+              </a>
+
+              <a href="mailto:jhonnybrasilianodasilva123etec@gmail.com" class="item-contato" style="text-decoration: none; color: inherit;">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <span>E-mail</span>
+                  <p id="texto-email">jhonnybrasilianodasilva123etec@gmail.com</p>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/jhonnybrasilianodasilva" target="_blank" class="item-contato" style="text-decoration: none; color: inherit;">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <div>
+                  <span>LinkedIn</span>
+                  <p>in/jhonnybrasilianodasilva</p>
+                </div>
+              </a>
+
+              <a href="https://github.com/jhonnybsilva" target="_blank" class="item-contato" style="text-decoration: none; color: inherit;">
+                <i class="fa-brands fa-github"></i>
+                <div>
+                  <span>GitHub</span>
+                  <p>github.com/jhonnybsilva</p>
+                </div>
+              </a>
+
+              <div class="item-contato">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <span>Localização</span>
+                  <p id="texto-localizacao">Embu das Artes - SP (Brasil)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulário de Mensagem -->
+          <form class="formulario-contato" id="form-contato">
+            <div class="grupo-formulario">
+              <label for="nome">Seu Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+            </div>
+
+            <div class="grupo-formulario">
+              <label for="email">Seu E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+            </div>
+
+            <div class="grupo-formulario">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+            </div>
+
+            <button type="submit" class="botao botao-primario botao-bloco">
+              Enviar Mensagem <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <div id="status-formulario" class="status-formulario"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <p>&copy; <span id="ano-atual">2026</span> <strong>Jhonny Brasiliano da Silva</strong> - Todos os direitos reservados.</p>
+      <p class="rodape-sub">Desenvolvido em HTML5, CSS3 e JavaScript com foco em alta performance.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
