@@ -32,22 +32,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const linksNav = document.querySelectorAll('.link-nav');
 
   if (botaoMenu && menuNavegacao) {
-    botaoMenu.addEventListener('click', () => {
-      menuNavegacao.classList.toggle('aberto');
-      const estaAberto = menuNavegacao.classList.contains('aberto');
-      botaoMenu.innerHTML = estaAberto 
+    const alternarMenu = (abrir) => {
+      const deveAbrir = typeof abrir === 'boolean' ? abrir : !menuNavegacao.classList.contains('aberto');
+      menuNavegacao.classList.toggle('aberto', deveAbrir);
+      document.body.style.overflow = deveAbrir ? 'hidden' : '';
+      botaoMenu.setAttribute('aria-expanded', deveAbrir);
+      botaoMenu.innerHTML = deveAbrir 
         ? '<i class="fa-solid fa-xmark"></i>' 
         : '<i class="fa-solid fa-bars"></i>';
-    });
+    };
+
+    botaoMenu.addEventListener('click', () => alternarMenu());
 
     // Fechar menu mobile ao clicar em um link
     linksNav.forEach(link => {
       link.addEventListener('click', () => {
         if (menuNavegacao.classList.contains('aberto')) {
-          menuNavegacao.classList.remove('aberto');
-          botaoMenu.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          alternarMenu(false);
         }
       });
+    });
+
+    // Fechar ao pressionar tecla ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menuNavegacao.classList.contains('aberto')) {
+        alternarMenu(false);
+      }
     });
   }
 
